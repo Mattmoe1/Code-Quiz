@@ -26,12 +26,18 @@ var questions = [
         answer: "quotes"
     },  
 ]
-
+const timeLeftDisplay = document.querySelector('#timer')
+const questionElement = document.getElementById("question")
+const questionContainer = document.querySelector(".question-container")
 let timeLeft = 70
+var currentQuestionIndex = 0
+var score = 0;
 var button1 = document.getElementById("button1");
 var button2 = document.getElementById("button2");
 var button3 = document.getElementById("button3");
 var button4 = document.getElementById("button4");
+var endScore = document.querySelector('#endScore');
+var submitBtn = document.getElementById('submitBtn');
 
 
 // timer function
