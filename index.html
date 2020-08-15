@@ -9,41 +9,53 @@
 </head>
 <body>
     <div class="container">
-        <div id="mainpage">
-            <h2>Code Quiz</h2>
-            <h3>Get ready for a fun quiz you have 70 seconds to finish the questions!!</h3>
-        <button id="startbtn">Start the Quiz</button>
-        <button id="pageHighscore" href="/highscore.html" >High Scores</button>
-        </div>
-    <div id="quiz">
-        <h3>Time Left: <span id="timer">70</span></h3>
-        <div id="questions"><p>Question</p></div>
-            <button id="button1" type="button" onclick="checkAnswer1">1</button>
-            <button id="button2" type="button" onclick="checkAnswer2">2</button>
-            <button id="button3" type="button" onclick="checkAnswer3">3</button>
-            <button id="button4" type="button" onclick="checkAnswer4">4</button>
-        <div id="results"></div>
-    </div>
-    <div id="gameEnd">
-        <div id="finalScore"></div>
-        <input type="text" size="35" placeholder="Enter your name for high score" name="initials" id="initials"/>
-        <button id="submitScore">Submit Score</button>
-    </div>
-    <div id=highscoreContainer>
-        <div id="high-scorePage">
-            <div id="highscore-header">
-                <h3>User Initials</h3>
-                <h3>Score</h3>
+        <div class="rowOne">
+            <div class="col-md-8">
+                <div class="jumbotron">
+                    <h2 class="display">Code Quiz!</h2>
+                    <p class="text">5 questions total, you have 70 seconds to finish- time is deducted for wrong answers...</p>
+                    <a id="startbtn" class="btn btn-primary btn-lg" href="#" role="button">Start the Quiz</a>
+                    <a id="pageHighscore" class="btn btn-secondary btn-lg" href="#" role="button">High Scores</a>
+                </div>
             </div>
-            <div id = "highscoreName"></div>
-            <div id = "highscoreResult"></div>
         </div>
-        <div id="endGameBtns">
-            <button id="playAgain" onclick="replayQuiz()">Play Again??</button>
-            <button id="clearHighscore" onclick="clearScore()">Clear Highscores</button>
+    <div class="question-container" class="hide">
+        <div class="rowTwo">
+            <div class="col-md-8">
+                <div class="jumbotron">
+                    <h2 class="display">Questions</h2>
+                    <p id="questionTitle" class="text">Blank</p>
+                    <div id="questions"><p>Question</p></div>
+                    <button id="button1" type="button" class="btn btn-primary btn-lg">1</button>
+                    <button id="button2" type="button" class="btn btn-primary btn-lg">2</button>
+                    <button id="button3" type="button" class="btn btn-primary btn-lg">3</button>
+                    <button id="button4" type="button" class="btn btn-primary btn-lg">4</button>
+                    <h3>Time Left: <span id="timer">70</span></h3>
+                </div>
+                <p id="results"></p>
+            </div>
         </div>
     </div>
+    <div class="rowThree">
+        <div class="col-md-8">
+            <div class="jumbotron">
+                <div class="endgame">
+                    <form>
+                        <h2>You Scored: <span id="endScore"></span></h1>
+                        <br>
+                        <h2>Your Name: </h2>
+                        <div class="form-group">
+                        <input type="name" id="exampleName">
+                        </div>
+                        <div class="form-group form-check">
+                        </div>
+                        <button id="submitBtn" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
     <script type="text/javascript" src="quiz.js"></script>
     <script type="text/javascript" src="score.js"></script>
 
