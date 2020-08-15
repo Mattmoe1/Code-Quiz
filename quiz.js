@@ -1,31 +1,3 @@
-//Quiz questions
-var questions = [
-    {
-        title: "What type of pop up box will allow a user to give a response?",
-        choices: ["input", "alert", "prompt", "confirm"],
-        answer: "prompt"
-    },
-    {
-        title: "Arrays in Javascript can be used to store _____.",
-        choices: ["number of strings", "other arrays", "booleans", "all of the above"],
-        answer: "all of the above"
-    },
-    {
-        title: "Commonly used data types DO NOT include:",
-        choices: ["strings", "booleans", "alerts", "numbers"],
-        answer: "alerts"
-    },
-    {
-        title: "The condition in an if/else statement is enclosed with ____.",
-        choices: ["parentheses", "square brackets", "curly brackets", "quotes"],
-        answer: "parentheses"
-    },
-    {
-        title: "String values must be enclosed within ____ when being assigned to variables.",
-        choices: ["commas", "curly brackets", "quotes", "parentheses"],
-        answer: "quotes"
-    },  
-]
 // Starting var and const
 let timeLeft = 70
 const timeLeftDisplay = document.querySelector('#timer')
@@ -57,10 +29,10 @@ function startGame() {
     setNextQuestion()
 }
 // Countdown
-startButton.addEventListener('click', function (){
-    startGame();
-    countDown();
-    })
+    startButton.addEventListener('click', function () {
+        startGame();
+        countDown();
+     })
 })
 // timer function
 function countDown() {
@@ -90,13 +62,13 @@ function checkAnswer(event) {
     var answer = questions[currentQuestionIndex].answer
     // feeback if answer is correct
     if (answer === event.target.innerHTML) {
-        feedBack.textContent = "Correct!";
+        results.textContent = "Correct!";
         score++;
-        clearFeedBack(); 
+        clearResults(); 
     // feedback if answer is wrong
     } else{
-        feedBack.textContent = "Sorry that is not correct";
-        clearFeedBack(); 
+        results.textContent = "Sorry that is not correct";
+        clearResults(); 
         timeLeft-=15
     }
     currentQuestionIndex++
@@ -109,7 +81,7 @@ function checkAnswer(event) {
 }
 function endGame() {
     endScore.textContent = score; 
-    questContainer.style.display = "none";
+    questionContainer.style.display = "none";
     gameOver.style.display = "block"; 
 }
 submitBtn.addEventListener("click", function(event){
@@ -123,8 +95,36 @@ function setScore() {
     window.location.replace('highscore.html')
     }
 // clears answer feedback 
-function clearFeedBack(){
+function clearResults(){
     setTimeout(function(){
-        feedBack.textContent = "";
+        results.textContent = "";
     },1000) 
 }
+//Quiz questions
+var questions = [
+    {
+        title: "What type of pop up box will allow a user to give a response?",
+        choices: ["input", "alert", "prompt", "confirm"],
+        answer: "prompt"
+    },
+    {
+        title: "Arrays in Javascript can be used to store _____.",
+        choices: ["number of strings", "other arrays", "booleans", "all of the above"],
+        answer: "all of the above"
+    },
+    {
+        title: "Commonly used data types DO NOT include:",
+        choices: ["strings", "booleans", "alerts", "numbers"],
+        answer: "alerts"
+    },
+    {
+        title: "The condition in an if/else statement is enclosed with ____.",
+        choices: ["parentheses", "square brackets", "curly brackets", "quotes"],
+        answer: "parentheses"
+    },
+    {
+        title: "String values must be enclosed within ____ when being assigned to variables.",
+        choices: ["commas", "curly brackets", "quotes", "parentheses"],
+        answer: "quotes"
+    },  
+]
