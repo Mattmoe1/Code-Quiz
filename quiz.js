@@ -48,17 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const startBtn = document.querySelector('start-btn')
 
     const startButton = document.getElementById("start-btn");
-
-// timer function
-function countDown() {
-    setInterval(function () {
-        if (timeLeft <= 0) {
-            clearInterval(timeLeft = 0)
-        }
-        timeLeftDisplay.innerHTML = timeLeft
-        timeLeft -= 1
-    }, 1000)
-}
 // Quiz start
 function startGame() {
     console.log('Start');
@@ -73,6 +62,16 @@ startButton.addEventListener('click', function (){
     countDown();
     })
 })
+// timer function
+function countDown() {
+    setInterval(function () {
+        if (timeLeft <= 0) {
+            clearInterval(timeLeft = 0)
+        }
+        timeLeftDisplay.innerHTML = timeLeft
+        timeLeft -= 1
+    }, 1000)
+}
 function setNextQuestion() {
     var question = questions[currentQuestionIndex]
     button1.textContent = question.choices[0]
@@ -107,4 +106,25 @@ function checkAnswer(event) {
     else{
         endGame();
     }
+}
+function endGame() {
+    endScore.textContent = score; 
+    questContainer.style.display = "none";
+    gameOver.style.display = "block"; 
+}
+submitBtn.addEventListener("click", function(event){
+    event.preventDefault();
+    setScore();
+}) 
+// stores in local storage
+function setScore() {
+    localStorage.setItem("highscore", score);
+    localStorage.setItem("highscoreName",  document.getElementById('exampleName').value);
+    window.location.replace('highscore.html')
+    }
+// clears answer feedback 
+function clearFeedBack(){
+    setTimeout(function(){
+        feedBack.textContent = "";
+    },1000) 
 }
