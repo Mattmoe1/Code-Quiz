@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div id="mainpage">
+            <h2>Code Quiz</h2>
+            <h3>Get ready for a fun quiz you have 70 seconds to finish the questions!!</h3>
+        <button id="startbtn">Start the Quiz</button>
+        <button id="pageHighscore" href="/highscore.html" >High Scores</button>
+        </div>
+    <div id="quiz">
+        <h3>Time Left: <span id="timer">70</span></h3>
+        <div id="questions"><p>Question</p></div>
+            <button id="button1" type="button" onclick="checkAnswer1">1</button>
+            <button id="button2" type="button" onclick="checkAnswer2">2</button>
+            <button id="button3" type="button" onclick="checkAnswer3">3</button>
+            <button id="button4" type="button" onclick="checkAnswer4">4</button>
+        <div id="results"></div>
+    </div>
+    <div id="gameEnd">
+        <div id="finalScore"></div>
+        <input type="text" size="35" placeholder="Enter your name for high score" name="initials" id="initials"/>
+        <button id="submitScore">Submit Score</button>
+    </div>
+    <div id=highscoreContainer>
+        <div id="high-scorePage">
+            <div id="highscore-header">
+                <h3>User Initials</h3>
+                <h3>Score</h3>
+            </div>
+            <div id = "highscoreName"></div>
+            <div id = "highscoreResult"></div>
+        </div>
+        <div id="endGameBtns">
+            <button id="playAgain" onclick="replayQuiz()">Play Again??</button>
+            <button id="clearHighscore" onclick="clearScore()">Clear Highscores</button>
+        </div>
+    </div>
+    </div>
+    <script type="text/javascript" src="quiz.js"></script>
+    <script type="text/javascript" src="score.js"></script>
+
+</body>
+</html>
