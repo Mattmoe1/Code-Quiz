@@ -1,4 +1,4 @@
-The idea of this project was to create a quiz game where you hit the Start Quiz button and it takes you on a five part Q&A. You have seventy-four sec to get through the quiz but everytime you get one question wrong it deducts ten sec from the quiz. At the end you are prompted to enter a three digit code so you can be placed onto the highscore page.
+The idea of this project was to create a quiz game where you hit the Start Quiz button and it takes you on a five part Q&A. You have seventy seconds to get through the quiz but everytime you get one question wrong it deducts fifteen seconds from the quiz. At the end you are prompted to enter your name so you can be placed onto the highscore page.
 
 
 
@@ -36,8 +36,6 @@ THEN I can save my initials and score
 ```
 
 The following animation demonstrates the application functionality:
-
-![code quiz](./Assets/04-web-apis-homework-demo.gif)
 
 ### Review
 
