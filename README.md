@@ -2,7 +2,8 @@ The idea of this project was to create a quiz game where you hit the Start Quiz 
 
 
 
-<img src= "images/Screen%20Shot%202020-06-23%20at%2010.12.21%20PM.png" width="500">
+<img src= "images/code%20quiz.png" width="500">
+<img src= "images/multi.png" width="500">
 
 https://mattmoe1.github.io/Quiz-Game/
 
